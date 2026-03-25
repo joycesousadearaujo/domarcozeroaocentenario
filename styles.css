@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://use.typekit.net/ojp6loi.css");
+
+* {
+    margin: 0;
+    padding: 120;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: #efeff0;
+    color: #152d1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-image: url('img/Ativo\ 1.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+}
+
+.landing-page-container{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+}
+
+.content-left{
+    width: 50%;
+    padding: 100px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    animation: surgirDeBaixo 1s ease-out forwards;
+    }
+
+.content-left ::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+       }
+
+.content-right{
+    width: 800%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+}
+
+.main-title{
+    font-family: 'warbler-banner', sans-serif;
+    font-size: 120px;
+    font-weight: 500;
+    color:#152d1a;
+    line-height: 0.9;
+    letter-spacing: -2px;
+}
+
+.highlight-centenário{
+    font-family: 'warbler-banner', sans-serif; 
+    font-style: italic; 
+    font-size: 150px;
+    font-weight: 800;
+    color: #b5853f; 
+}
+
+.description-text{
+    font-family: 'Lato';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    color: #152d1a;
+    margin-top: 50px;
+    line-height: 1.2;
+}
+
+.book-mockup{
+    max-width: 260%;
+    height: auto;
+}
+
+.btn-download{
+    display: inline-block;
+    margin-top: 40px;
+    padding: 16px 32px;
+    background-color: #95c77d;
+    color: #152d1a;
+    font-family: 'lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.10s ease, transform 0.5s ease;
+}
+
+.btn-download:hover{
+    background-color: #efeff0;
+    transform: translateY(-2px);
+}
+
+@keyframes flutuar{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.book-mockup{
+    max-width: 150%;
+    height: auto;
+    animation: flutuar 4s ease-in-out infinite;
+}
+
+@keyframes surgirDeBaixo{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        height: auto;
+        overflow-y: auto;
+         background-image: url('img/Ativo\ 2.png');
+         background-repeat: no-repeat;
+         background-position: left;
+         background-size: cover;
+    }
+    .landing-page-container{
+        flex-direction: column;
+        height: auto;
+    }
+    .content-left{
+        width: 100%;
+        padding: 60px 20px 30px 20px;
+        text-align: center;
+    }
+    .content-right{
+        width: 100%;
+        padding: 10px 30px 60px 30px;
+        align-items: center;
+    }
+    .main-title{
+        font-size: 72px;
+    }
+    .highlight-centenário{
+        font-size: 82px;
+    }
+    .description-text{
+        font-size: 25px;
+    }
+    .btn-download{
+    display: inline-block;
+    margin-top: 60px;
+    padding: 16px 32px;
+    background-color: #95c77d;
+    color: #152d1a;
+    font-family: 'lato', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.10s ease, transform 0.5s ease;
+    }
+    .content-left::before{
+        background-position: center;
+        background-size: cover;
+    }
+}
